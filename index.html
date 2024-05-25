@@ -4,21 +4,39 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Vite App</title>
   </head>
   <body>
-    <div class="top">
+    <section class="top">
       <div class="top-part">
         <div class="top-right">
-          <h3>@copy; Denel Lawrence</h3>
+          <h3>&copy; Denzel Lawrence</h3>
         </div>
-        <div class="top-left"></div>
+        <div class="top-left">
+          <h3 class="results">Computer Player</h3>
+        </div>
       </div>
       <h3>Computer</h3>
-    </div>
-    <div class="middle"></div>
-    <div class="bottom"></div>
+      <div class="display">✌️</div>
+    </section>
+
+    <section class="middle">
+      <h2>Currently Draw</h2>
+    </section>
+
+    <section class="bottom">
+      <div class="display">✌️</div>
+      <div class="select">
+        <button class="btn" id="rock">✊</button>
+        <button class="btn" id="paper">✋</button>
+        <button class="btn" id="scissors">✌️</button>
+      </div>
+    </section>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
