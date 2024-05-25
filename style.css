@@ -79,9 +79,9 @@ button{
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  display: flex;
+  margin-top: 10px;
 }
 .select{
   display: flex;
-  margin-top: 10px;
-
 }
