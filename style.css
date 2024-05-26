@@ -29,8 +29,6 @@ body{
   background-color: #9ec91e;
   justify-content: center;
   align-items: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
   text-align: center;
 }
 .middle{
@@ -54,6 +52,9 @@ body{
   justify-content: center;
   align-items: center;
 }
+a{
+  color: #551A7D;
+}
 h2{
   color: black;
   font-family: "Press Start 2P", system-ui;
@@ -70,7 +71,7 @@ span{
 .top-part{
   display: flex;
   justify-content: space-between;
-  gap: 15rem;
+  /* gap: 15rem; */
 }
 .display{
   display: flex;
@@ -126,6 +127,34 @@ button{
 @media (max-width: 768px){
   .top{
     width: 100%;
+  }
+  .middle{
+    width: 100%;
+  }
+  .bottom{
+    width: 100%;
+  }  
+}
+@media (max-width: 430px){
+  .top{
+    width: 100%;
+  }
+  .top-part{
+    flex-direction: column;
+  }
+  .middle{
+    width: 100%;
+  }
+  .bottom{
+    width: 100%;
+  }  
+}
+@media (max-width: 360px){
+  .top{
+    width: 100%;
+  }
+  .top-part{
+    flex-direction: column;
   }
   .middle{
     width: 100%;
