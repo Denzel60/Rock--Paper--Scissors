@@ -4,8 +4,25 @@ let scissorsEl = document.getElementById("scissors");
 let compEl = document.getElementById("comp");
 let playerEl = document.getElementById("player");
 let resultsEl = document.getElementById("results");
-let compScoreEl = document.getElementById("compScore");
-let playerScoreEl = document.getElementById("playerScore")
+var compScoreEl = document.getElementById("compScore");
+var playerScoreEl = document.getElementById("playerScore");
+
+let playerScore = 0;
+let computerScore = 0;
+
+function updateScore() {
+  playerScoreEl.textContent = playerScore;
+  compScoreEl.textContent = computerScore;
+}
+
+function handleWin() {
+  if (resultsEl.textContent == "Player Wins") {
+    playerScore++;
+  } else if (resultsEl.textContent == "Computer Wins"){
+    computerScore++;
+  };
+  updateScore();
+}
 
 rockEl.addEventListener("click", ()=>{
     let computerChoice = Math.floor((Math.random() * 3) + 1);
@@ -21,10 +38,11 @@ rockEl.addEventListener("click", ()=>{
     if(computerChoice === 1 && playerEl.textContent === `✊`){
         resultsEl.textContent = "Draw"
     } else if (computerChoice === 2){
-        resultsEl.textContent = "Computer wins";
+        resultsEl.textContent = "Computer Wins";
     } else {
         resultsEl.textContent = "Player Wins";
-    }
+    };
+    handleWin();
 })
 
 paperEl.addEventListener("click", ()=>{
@@ -41,10 +59,11 @@ paperEl.addEventListener("click", ()=>{
     if(computerChoice === 2 && playerEl.textContent === `✋`){
         resultsEl.textContent = "Draw"
     } else if (computerChoice === 1){
-        resultsEl.textContent = "Player wins";
+        resultsEl.textContent = "Player Wins";
     } else {
         resultsEl.textContent = "Computer Wins";
-    }
+    };
+    handleWin();
 })
 
 scissorsEl.addEventListener("click", ()=>{
@@ -61,12 +80,23 @@ scissorsEl.addEventListener("click", ()=>{
     if(computerChoice === 3 && playerEl.textContent === `✌️`){
         resultsEl.textContent = "Draw";
     } else if (computerChoice === 1){
-        resultsEl.textContent = "Computer wins";
+        resultsEl.textContent = "Computer Wins";
     } else {
         resultsEl.textContent = "Player Wins";
-    }
+    };
+    handleWin();
 });
 
-if(resultsEl.textContent = "Draw"){
 
-}
+// let score = 0;
+// let computerScore = score++;
+// let playerScore = score++;
+
+// if(resultsEl.textContent = "Computer Wins"){
+//     compScoreEl.textContent = `${computerScore}`;
+// } else if (resultsEl.textContent = "Player Wins"){
+//     playerScoreEl.textContent = `${playerScore}`;
+// } else if (resultsEl.textContent = "Draw"){
+//     compScoreEl.textContent = `${score}`;
+//     playerScoreEl.textContent = `${score}`;
+// }
